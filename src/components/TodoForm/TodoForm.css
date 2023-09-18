@@ -1,0 +1,31 @@
+.container-form {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    background-color: rgb(254,254,254);
+    height: 10%;
+    border-bottom: rgb(230,230,230) 1px solid;
+}
+
+.container-form_input {
+    border: none;
+    width: 85%;
+}
+
+.container-form_input:focus {
+    outline: none;
+}
+
+.container-form_button {
+    border: none;
+    background-color:rgb(254,254,254);
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-form_button img {
+    height: 30px;
+}
