@@ -27,7 +27,7 @@ body {
     width: 100%;
     height: 80%;
     background-color: white;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .container-options {
@@ -48,18 +48,21 @@ body {
     border: unset;
     background-color: white;
     color: rgb(171,171,171);
+    cursor: pointer;
 }
 
 .active {
     border: 1px solid rgba(0, 0, 0, 0.122);
     background-color: rgb(255, 255, 255);
     color: rgb(102, 102, 102);
+    cursor: pointer;
 }
 
 .container-options_clearCompletedTask button {
     border: unset;
     background-color: white;
     color: rgb(171,171,171);
+    cursor: pointer;
 }
 
 
