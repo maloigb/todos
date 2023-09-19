@@ -15,7 +15,7 @@ const Task = ({ task, toggleCompleteTask }: Props) => {
                 onChange={() => toggleCompleteTask(task.id)}
             />
             <h3
-                className={task.completed ? "container-task_text completed" : "container-task_text"}>
+                className={`container-task_text ${task.completed ? "completed" : ""}`}>
                 {task.name}
             </h3>
         </div>

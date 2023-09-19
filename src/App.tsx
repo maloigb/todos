@@ -13,26 +13,24 @@ const App: React.FC = () => {
   const [tasks, setTasks] = useState<ITask[]>([]);
   const [showTasksMode, setShowTasksMode] = useState(taskModeNames.All);
   const createTask = (textInput: string) => {
-    setTasks([{
-      id: (tasks.length + 1),
+    setTasks(prev => [...prev, {
+      id: (prev.length + 1),
       name: textInput,
       completed: false
-    }, ...tasks])
+    }] )
   }
   const toggleCompleteTask = (taskId: number) => {
-    const newTasks = tasks.map((task) => {
+    setTasks(prev => prev.map((task) => {
       if (taskId === task.id) {
         return {
           ...task, completed: !task.completed
         }
       }
       return task;
-    });
-    setTasks(newTasks);
+    }));
   }
   const handleClear = () => {
-    const outstandingTasks = tasks.filter((task) => !task.completed);
-    setTasks(outstandingTasks);
+    setTasks(prev => prev.filter((task) => !task.completed));
   }
 
   const remainingTasks = useMemo(
@@ -51,12 +49,11 @@ const App: React.FC = () => {
     }, [showTasksMode, tasks]
   )
 
-  const getTasksList = () => tasksDependingOnMode.map((task) => <Task key={task.id} toggleCompleteTask={toggleCompleteTask} task={task} />);
   return (
     <div className="container">
       <TodoForm createTask={createTask} />
       <div className='container-tasks'>
-        {getTasksList()}
+        {tasksDependingOnMode.map((task) => <Task key={task.id} toggleCompleteTask={toggleCompleteTask} task={task} />)}
       </div>
       <div className="container-options">
         <div className='container-options_countActiveitems'>
