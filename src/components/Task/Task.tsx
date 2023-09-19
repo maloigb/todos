@@ -2,8 +2,8 @@ import { ITask } from "../../App";
 import "./Task.css";
 
 interface Props {
-	task: ITask,
-	toggleCompleteTask: (id: number) => void
+  task: ITask;
+  toggleCompleteTask: (id: number) => void;
 }
 const Task = ({ task, toggleCompleteTask }: Props) => {
 	return (
@@ -15,7 +15,8 @@ const Task = ({ task, toggleCompleteTask }: Props) => {
 				onChange={() => toggleCompleteTask(task.id)}
 			/>
 			<h3
-				className={`container-task_text ${task.completed ? "completed" : ""}`}>
+				className={`container-task_text ${task.completed ? "completed" : ""}`}
+			>
 				{task.name}
 			</h3>
 		</div>

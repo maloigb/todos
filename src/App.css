@@ -1,89 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 
-body, button {
-    font-family: 'Roboto', sans-serif;
-   }
+body,
+button {
+  font-family: "Roboto", sans-serif;
+}
 
 body {
-    background-color: rgb(245,245,245);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: rgb(245, 245, 245);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    width: 400px;
-    height: 400px;
-    box-shadow: 1px 1px 6px 6px rgba(0, 0, 0, 0.089);
-    /* -webkit-box-shadow: 1px 1px 6px 6px rgba(0, 0, 0, 0.089);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  box-shadow: 1px 1px 6px 6px rgba(0, 0, 0, 0.089);
+  /* -webkit-box-shadow: 1px 1px 6px 6px rgba(0, 0, 0, 0.089);
     -moz-box-shadow: 1px 1px 6px 6px rgba(0, 0, 0, 0.089); */
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .container-tasks {
-    width: 100%;
-    height: 80%;
-    background-color: white;
-    overflow-y: auto;
+  width: 100%;
+  height: 80%;
+  background-color: white;
+  overflow-y: auto;
 }
 
 .container-options {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items:center;
-    width: 100%;
-    height: 10%;
-    background-color: rgb(255,255,255);
-    border-top: 1px solid rgba(0, 0, 0, 0.126);
-    color: rgb(171,171,171);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  background-color: rgb(255, 255, 255);
+  border-top: 1px solid rgba(0, 0, 0, 0.126);
+  color: rgb(171, 171, 171);
 }
 
-
-
 .container-options_showTasks_button {
-    border: unset;
-    background-color: white;
-    color: rgb(171,171,171);
-    cursor: pointer;
+  border: unset;
+  background-color: white;
+  color: rgb(171, 171, 171);
+  cursor: pointer;
 }
 
 .active {
-    border: 1px solid rgba(0, 0, 0, 0.122);
-    background-color: rgb(255, 255, 255);
-    color: rgb(102, 102, 102);
-    cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.122);
+  background-color: rgb(255, 255, 255);
+  color: rgb(102, 102, 102);
+  cursor: pointer;
 }
 
 .container-options_clearCompletedTask button {
-    border: unset;
-    background-color: white;
-    color: rgb(171,171,171);
-    cursor: pointer;
+  border: unset;
+  background-color: white;
+  color: rgb(171, 171, 171);
+  cursor: pointer;
 }
 
-
 ::-webkit-scrollbar {
-    width: 20px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.068); 
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #00000071; 
-  }
+  width: 20px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.068);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #00000071;
+}
