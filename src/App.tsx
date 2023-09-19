@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import Task from './components/Task/Task';
 import './App.css'
-import TodoForm from './components/TaskForm/TaskForm';
+import TaskForm from './components/TaskForm/TaskForm';
 import { taskModeNames } from './utils/constants';
 
 export interface ITask {
@@ -51,7 +51,7 @@ const App: React.FC = () => {
 
   return (
     <div className="container">
-      <TodoForm createTask={createTask} />
+      <TaskForm createTask={createTask} />
       <div className='container-tasks'>
         {tasksDependingOnMode.map((task) => <Task key={task.id} toggleCompleteTask={toggleCompleteTask} task={task} />)}
       </div>

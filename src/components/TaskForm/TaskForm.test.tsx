@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event'
 
 
 describe('TaskForm component', () => {
-    it('Task Renders', () => {
+    it('Task Form', () => {
         const createTask = jest.fn();
         render(<TaskForm createTask={createTask} />)
         userEvent.type(screen.getByPlaceholderText(/What needs to be do/i), 'Todo1')

@@ -2,7 +2,7 @@ import { useState } from "react";
 import './TaskForm.css';
 import IconToButton from '../../icons/iconToButton.png'
 
-const TodoForm = ({ createTask } : {createTask : (text : string) => void}) => {
+const TaskForm = ({ createTask } : {createTask : (text : string) => void}) => {
     const [taskName, setTaskName] = useState('');
     const handleCreate = () => {
       createTask(taskName);
@@ -18,4 +18,4 @@ const TodoForm = ({ createTask } : {createTask : (text : string) => void}) => {
     )
 }
 
-export default TodoForm;
+export default TaskForm;
