@@ -15,7 +15,7 @@ const App: React.FC = () => {
 	const createTask = (textInput: string) => {
 		setTasks((prev) => [
 			{
-				id: prev.length + 1,
+				id: Date.now(),
 				name: textInput,
 				completed: false,
 			},
@@ -54,7 +54,7 @@ const App: React.FC = () => {
 		};
 		return config[showTasksMode];
 	}, [showTasksMode, tasks]);
-
+	console.log(tasks);
 	return (
 		<div className="container">
 			<TaskForm createTask={createTask} />
