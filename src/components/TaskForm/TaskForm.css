@@ -1,7 +1,7 @@
 .container-form {
   width: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   background-color: rgb(254, 254, 254);
   height: 10%;
   border-bottom: rgb(230, 230, 230) 1px solid;

@@ -14,7 +14,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   width: 400px;
   height: 400px;
@@ -31,7 +31,7 @@ body {
   overflow-y: auto;
 }
 
-.container-options {
+footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -41,27 +41,6 @@ body {
   background-color: rgb(255, 255, 255);
   border-top: 1px solid rgba(0, 0, 0, 0.126);
   color: rgb(171, 171, 171);
-}
-
-.container-options_showTasks_button {
-  border: unset;
-  background-color: white;
-  color: rgb(171, 171, 171);
-  cursor: pointer;
-}
-
-.active {
-  border: 1px solid rgba(0, 0, 0, 0.122);
-  background-color: rgb(255, 255, 255);
-  color: rgb(102, 102, 102);
-  cursor: pointer;
-}
-
-.container-options_clearCompletedTask button {
-  border: unset;
-  background-color: white;
-  color: rgb(171, 171, 171);
-  cursor: pointer;
 }
 
 ::-webkit-scrollbar {

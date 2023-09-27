@@ -22,6 +22,6 @@
     "linebreak-style": ["error", "windows"],
     "quotes": ["error", "double"],
     "semi": ["error", "always"],
-    "react/jest" : true
+    "react/jest" : 0
   }
 }
