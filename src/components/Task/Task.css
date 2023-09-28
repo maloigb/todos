@@ -32,7 +32,7 @@
 
 .container-task_text {
   color: rgb(78, 78, 78);
-  width: 90%;
+  width: 80%;
   margin-left: 10px;
   font-size: 20px;
   word-break: break-all;
@@ -41,4 +41,20 @@
 .completed {
   color: rgba(0, 0, 0, 0.133);
   text-decoration: line-through;
+}
+
+.container-task_button {
+  border: none;
+  background-color: rgb(254, 254, 254);
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+.container-task img {
+  height: 30px;
 }

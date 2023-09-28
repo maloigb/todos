@@ -4,12 +4,12 @@ import { ITask } from "../../App";
 
 interface Props {
     remainingTasks: ITask[];
-    handleClear: () => void;
+    hanleClearCompleted: () => void;
     showTasksMode: taskModeNames;
     setShowTasksMode: (taskMode : taskModeNames) => void
 }
 
-const TaskListControls = ({ remainingTasks, handleClear, showTasksMode,  setShowTasksMode } : Props) => {
+const TaskListControls = ({ remainingTasks, hanleClearCompleted, showTasksMode,  setShowTasksMode } : Props) => {
 
 	return (
 		<div className="container-options">
@@ -49,7 +49,7 @@ const TaskListControls = ({ remainingTasks, handleClear, showTasksMode,  setShow
 				</button>
 			</div>
 			<div className="container-options_clearCompletedTask">
-				<button onClick={handleClear}>Clear completed</button>
+				<button onClick={hanleClearCompleted}>Clear completed</button>
 			</div>
 		</div>
 	);

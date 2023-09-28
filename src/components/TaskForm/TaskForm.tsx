@@ -3,11 +3,14 @@ import "./TaskForm.css";
 import IconToButton from "../../icons/iconToButton.png";
 
 const TaskForm = ({ createTask }: { createTask: (text: string) => void }) => {
+
 	const [taskName, setTaskName] = useState("");
+
 	const handleCreate = () => {
 		createTask(taskName);
 		setTaskName("");
 	};
+	
 	return (
 		<div className="container-form">
 			<button
