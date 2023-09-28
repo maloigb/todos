@@ -15,12 +15,12 @@ const App: React.FC = () => {
 
 	const {
 		createTask,
-		toggleCompleteTask,
 		hanleClearCompleted,
 		remainingTasks,
 		tasksDependingOnMode,
 		showTasksMode,
-		setShowTasksMode
+		setShowTasksMode,
+		editTask
 	} = useTasks();
 
 	return (
@@ -30,8 +30,8 @@ const App: React.FC = () => {
 				{tasksDependingOnMode.map((task) => (
 					<Task
 						key={task.id}
-						toggleCompleteTask={toggleCompleteTask}
 						task={task}
+						editTask={editTask}
 					/>
 				))}
 			</div>

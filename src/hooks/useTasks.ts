@@ -2,9 +2,9 @@ import { useMemo, useState } from "react";
 import { taskModeNames } from "../utils/constants";
 
 export interface ITask {
-    id: number;
-    name: string;
-    completed: boolean;
+	id: number;
+	name: string;
+	completed: boolean;
 }
 
 const useTasks = () => {
@@ -22,20 +22,6 @@ const useTasks = () => {
 			},
 			...prev
 		]);
-	};
-
-	const toggleCompleteTask = (taskId: number) => {
-		setTasks((prev) =>
-			prev.map((task) => {
-				if (taskId === task.id) {
-					return {
-						...task,
-						completed: !task.completed,
-					};
-				}
-				return task;
-			}),
-		);
 	};
 
 	const hanleClearCompleted = () => {
@@ -58,14 +44,24 @@ const useTasks = () => {
 		return config[showTasksMode];
 	}, [showTasksMode, tasks]);
 
+	const editTask = (editedTask: ITask) => {
+		setTasks((prev) => prev.map((task) => {
+			if (editedTask.id === task.id) {
+				return editedTask;
+			}
+			return task;
+		}),
+		);
+	};
+
 	return {
 		createTask,
-		toggleCompleteTask,
 		hanleClearCompleted,
 		remainingTasks,
 		tasksDependingOnMode,
 		showTasksMode,
-		setShowTasksMode
+		setShowTasksMode,
+		editTask
 	};
 };
 

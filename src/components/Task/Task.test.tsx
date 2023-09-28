@@ -4,13 +4,13 @@ import Task from "./Task";
 
 describe("Task component", () => {
 	it("Task Renders", () => {
-		const toggleCompleteTask = jest.fn();
+		const editTask = jest.fn();
 		const task = {
 			id: 1,
 			name: "Todo2",
 			completed: false,
 		};
-		render(<Task task={task} toggleCompleteTask={toggleCompleteTask} />);
+		render(<Task task={task} editTask={editTask}/>);
 		expect(screen.getByText("Todo2")).toBeInTheDocument();
 	});
 });
