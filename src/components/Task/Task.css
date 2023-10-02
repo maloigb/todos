@@ -58,3 +58,46 @@
 .container-task img {
   height: 30px;
 }
+
+.container-editingTask {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+  min-height: 75px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.092);
+}
+
+.container-editingTask_input {
+    border: none;
+    width: 85%;
+    margin-left: 15px;
+    font-size: 20px;
+
+  
+}
+
+.container-editingTask_input:focus {
+  outline: none;
+} 
+
+.container-editingTask_button {
+  border: unset;
+  background-color: rgb(254, 254, 254);
+  width: 30%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-right: unset;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.089);
+}
+
+.container-editingTask_button:hover {
+  background-color: rgba(102, 102, 102, 0.179);
+  transition-duration: 1s;
+}

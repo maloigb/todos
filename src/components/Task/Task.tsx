@@ -14,7 +14,9 @@ enum modeNames {
 }
 
 const Task = ({ task, editTask }: Props) => {
+
 	const [mode, setMode] = useState(modeNames.initial);
+
 	const [nameModifiedTask, setNameModifiedTask] = useState(task.name);
 
 	const handleEditSaveClick = () => {
@@ -31,15 +33,17 @@ const Task = ({ task, editTask }: Props) => {
 		setMode(modeNames.initial);
 	};
 	const editMode = () => {
+
 		return (
-			<div>
+			<div className="container-editingTask">
 				<input 
+					className="container-editingTask_input"
 					type="text" 
 					value={nameModifiedTask}
 					onChange={(e) => setNameModifiedTask(e.target.value)}
 				/>
-				<button onClick={handleEditSaveClick}>Сохарнить</button>
-				<button onClick={cancelEditing}>X</button>
+				<button className="container-editingTask_button" onClick={handleEditSaveClick}>Сохарнить</button>
+				<button className="container-editingTask_button" onClick={cancelEditing}>Отменить</button>
 			</div>
 		);
 	};
