@@ -9,7 +9,7 @@
 Для запуска данного проекта необходимо склонировать данный репозиторий и запустить его с использованием пакетного менеджера.
 
 ```sh
-git clone git@github.com:maloigb/notification-menu.git
+git clone git@github.com:maloigb/todos.git
 npm i
 npm run start
 ```
